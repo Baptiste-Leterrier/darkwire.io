@@ -50,7 +50,7 @@ Please report any security issues to `hello@darkwire.io`.
 
 If you are trying to access the legacy stable version of darkwire, you can use the oldest tag before `v2.0.0` which is `v1.6.0` or checkout the `legacy` branch.
 
-### How it works
+## How it works
 
 Darkwire uses a combination of asymmetric encryption (RSA-OAEP), symmetric session keys (AES-CBC) and signing keys (HMAC) for security.
 
@@ -72,7 +72,7 @@ Darkwire does not provide any guarantee that the person you're communicating wit
 
 ## File Transfer
 
-Darkwire encodes documents (up to 1MB) into base64 using [btoa](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa) and is encrypted the same way chat messages are. 
+Darkwire encodes documents (up to 4MB) into base64 using [btoa](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/btoa) and is encrypted the same way chat messages are. 
 
 1. When a file is "uploaded", the document is encoded on the client and the server recieves the encrypted base64 string.
 2. The server sends the encrypted base64 string to clients in the same chat room.
@@ -85,3 +85,29 @@ Darkwire uses [socket.io](http://socket.io) to transmit encrypted information us
 Rooms are stored in memory on the server until all participants have left, at which point the room is destroyed. Only public keys are stored in server memory for the duration of the room's life.
 
 Chat history is stored in each participant's browser, so it is effectively erased (for that user) when their window is closed.
+
+## Contact
+
+Questions/comments? Email us at hello[at]darkwire.io
+
+Found a bug or want a new feature? [Open a ticket on Github](https://github.com/seripap/darkwire.io/issues).
+
+## Donate
+
+Darkwire is maintained and hosted by two developers with full-time jobs. If you get some value from this service we would appreciate any donation you can afford. We use these funds for server and DNS costs. Thank you!
+
+**Bitcoin**
+
+189sPnHGcjP5uteg2UuNgcJ5eoaRAP4Bw4
+
+**Ethereum**
+
+0xD6e3D881036903999E2c0480fe9d2c20600C1c28
+
+**Litecoin**
+
+LUViQeSggBBtYoN2qNtXSuxYoRMzRY8CSX
+
+**PayPal:**  
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"><input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="UAH5BCLA9Y8VW"> <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> ![](https://www.paypalobjects.com/en_US/i/scr/pixel.gif)</form>
